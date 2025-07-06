@@ -26,12 +26,19 @@ export class Chat {
       id: 3
     },
   ]
+  form_state= { author:'', text:''}
   enviarMensaje(){
-    console.log("mensaje enviado")
-    console.log(this.form_state)
+      console.log("mensaje enviado")
+      console.log(this.form_state)
+      const newMessage = {
+      id: Date.now(),
+      author: this.form_state.author,
+      text: this.form_state.text
+    };
+    this.messages.push(newMessage);
+    this.form_state= { 
+      author:'', 
+      text:''
+    }  
   }
-  form_state= {
-    author:'',
-    text:''
   }
-}

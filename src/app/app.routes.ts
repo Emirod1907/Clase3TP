@@ -31,10 +31,9 @@ export const routes: Routes = [
     {
         path:'chat',
         component: Chat
-    }
+    },
     {
         path:'posts',
         component: Posts
     }
-
 ];
